@@ -1,3 +1,5 @@
+{{-- {{ $navBarData }} --}}
+
 <style>
     .navbar {
         position: fixed;
@@ -30,13 +32,17 @@
         color: gray
     }
 
+    .subMenu{
+        font-size: 0.6rem !important;
+    }
 
 
     @media (min-width:992px) {
         .navbar .navbar-nav {
-            margin-left: 40%;
+            margin-left: 35%;
         }
     }
+
 </style>
 
 
@@ -51,19 +57,19 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item">
-                    <a class="nav-link px-4 active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link px-4 active" aria-current="page" href="{{ route('home') }}#top">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link px-4" href="#">About Me</a>
+                    <a class="nav-link px-4" href="{{ route('home') }}#about">About Me</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link px-4" href="#">Languages</a>
+                    <a class="nav-link px-4" href="{{ route('home') }}#skills">Skills</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link px-4" href="#">Education</a>
+                    <a class="nav-link px-4" href="{{ route('home') }}#education">Education</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -72,56 +78,33 @@
                         Projects
                     </a>
                     <ul class="dropdown-menu mt-2">
-                        <li class="dropend">
-                            <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
-                                href="">Responsive</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                            </ul>
-                            </a>
-                        </li>
-                        <li class="dropend">
-                            <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
-                                href="">Responsive</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                            </ul>
-                            </a>
-                        </li>
-                        <li class="dropend">
-                            <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
-                                href="">Responsive</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                            </ul>
-                            </a>
-                        </li>
-                        <li class="dropend">
-                            <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
-                                href="">Responsive</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                                <li><a class="nav-link" href="">abc</a></li>
-                            </ul>
-                            </a>
-                        </li>
+                        @foreach ($navBarData as $category)
+                            <li class="dropend">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                    href="">{{ $category->categories_name }}</a>
+                                <ul class="dropdown-menu">
+                                    @foreach ($category->projects as $project)
+                                        <li><a class="nav-link subMenu" href="">{{ $project->project_name }}</a></li>
+                                    @endforeach
+                                </ul>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link px-4" href="#">Socials
+                    <a class="nav-link px-4" href="{{ route('home') }}#hobby">Hobby
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link px-4" href="{{ route('home') }}#social">Socials
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link px-4" href="#">Contact</a>
+                    <a class="nav-link px-4" href="{{ route('home') }}#contact">Contact</a>
                 </li>
 
             </ul>

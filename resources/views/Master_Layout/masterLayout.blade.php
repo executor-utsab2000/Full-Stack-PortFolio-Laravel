@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    @include('Components.Fixed.navbar')
+    @include('Components.Fixed.navbar', ['navBarData' => $navBarData])
 
     <div class="container-fluid px-0">
 

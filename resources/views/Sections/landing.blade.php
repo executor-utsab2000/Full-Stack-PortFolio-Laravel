@@ -52,6 +52,11 @@
         .resume button:hover {
             transform: scale(0.95);
         }
+
+
+        .imageLangLogo{
+            filter: drop-shadow(5px 5px 5px #000000);
+        }
     </style>
 
 
@@ -80,14 +85,18 @@
                         </p>
 
                         <div class='row techarea'>
-                            <div class="col-3">
+                            <div class="col-3 my-auto">
                                 <span>𝗧𝗲𝗰𝗵 𝗦𝘁𝗮𝗰𝗸</span>
                                 <span class="mx-3"><i class="fa-solid fa-grip-lines-vertical"></i></span>
                             </div>
-                            <div class="col-9">
-
-                                {{-- language Images to go in loop from db --}}
-
+                            <div class="col-9 ">
+                                <div class="row">
+                                    @foreach ($languages as $language)
+                                    <div class="col-2 mb-4 d-flex justify-content-center">
+                                        <img src='{{ "Images/language/$language->language_image"}}' alt="" class=" imageLangLogo img-fluid">
+                                    </div>
+                                @endforeach
+                                </div>
                             </div>
 
 

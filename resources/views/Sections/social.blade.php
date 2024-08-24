@@ -9,7 +9,7 @@
 
 
 
-<div class="container-fluid my-4" id='education'>
+<div class="container-fluid my-4" id='social'>
     <div class="container">
         <div class="row">
 

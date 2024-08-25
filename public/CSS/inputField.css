@@ -1,0 +1,61 @@
+/* From Uiverse.io by kamehame-ha */
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    /* max-width: 240px; */
+    width: 100%;
+}
+
+.coolinput label.text {
+    font-size: 0.75rem;
+    color: #818CF8;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: antiquewhite;
+    width: fit-content;
+}
+
+.coolinput input[type=text].input, textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 2px #818CF8 solid;
+    border-radius: 5px;
+    background: antiquewhite;
+}
+
+textarea{
+    font-weight: 600;
+    font-size: 0.6rem;
+}
+
+.coolinput input[type=text].input:focus , textarea:focus {
+    outline: none;
+}
+
+.query {
+    resize: none;
+}
+
+.submitBtn {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    width: 100%;
+    padding: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    font-size: 0.8rem !important;
+    background-color: #06d6a0 !important;
+}
+
+.errorMsg{
+    padding-left: 1rem;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}

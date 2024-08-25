@@ -73,7 +73,7 @@
 
 
             <div class="col-12 my-3 d-flex justify-content-center contactBtn" data-aos="zoom-in-up">
-                <a href="{{ route('contactForm') }}" target="__blank">
+                <a href="{{ route('contactForm') }}">
                     <button class="btn">
                         Click here to get in touch
                         <i class="fa-solid fa-hand-point-right ms-2"></i>

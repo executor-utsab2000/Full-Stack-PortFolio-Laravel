@@ -15,4 +15,4 @@ Route::controller(FetchAllDataController::class)->group(function () {
     Route::get('/contact', 'ContactForm')->name('contactForm');
 });
 
-Route::post('/formSubmitUser' , UserDataInsertController::class)->name('userFormSubmit');
+Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormSubmit');

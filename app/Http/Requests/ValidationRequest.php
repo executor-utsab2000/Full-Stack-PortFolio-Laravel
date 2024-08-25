@@ -26,7 +26,7 @@ class ValidationRequest extends FormRequest
             'email' => 'required | email | unique:contact_form,contact_user_email',
             'contactNumber' => 'required | numeric | digits:10 | unique:contact_form,contact_user_phone',
             'residence' => 'required ',
-            'query' => 'required | max:100',
+            'query' => 'required |string | max:100',
         ];
     }
 

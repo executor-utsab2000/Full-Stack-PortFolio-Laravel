@@ -61,7 +61,7 @@
                                     <div class="col-12 my-2">
                                         <div class="inputContainers">
                                             <div class="coolinput">
-                                                <label for="input" class="text">Name (IN CAPS):</label>
+                                                <label for="input" class="text">Name:</label>
                                                 <input type="text" placeholder="Write here..." name="userName"
                                                     class="input">
                                                 @error('userName')

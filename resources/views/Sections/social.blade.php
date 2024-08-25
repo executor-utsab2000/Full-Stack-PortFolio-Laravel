@@ -13,13 +13,13 @@
     <div class="container">
         <div class="row">
 
-            <div class='col-lg-6 d-flex justify-content-center flex-column my-auto mt-2 mt-lg-0 px-0 px-lg-5 imgDiv'>
+            <div class='col-lg-6 d-flex justify-content-center flex-column my-auto mt-2 mt-lg-0 px-0 px-lg-5 imgDiv' data-aos="zoom-in-up">
                 <x-section-header heading="Socials" subHeading=" Social Media platforms where you can get in touch with me"
                     icon="fa-solid fa-thumbs-up" />
 
             <div class="row socialIconDiv my-3">
                 @foreach ($socialData as $social)
-                    <div class="col-6 d-flex justify-content-center my-3">
+                    <div class="col-6 d-flex justify-content-center my-3" data-aos="zoom-in-up">
                             <a href="{{ $social->social_link }}" target='_blank'>
                                 <img src='{{ asset("Images/Socials/$social->social_image") }}'
                                     class="img-fluid socialImage" />
@@ -32,7 +32,7 @@
 
 
 
-            <div class='col-lg-6 d-flex justify-content-center my-auto mt-2 mt-lg-0 px-0 px-lg-5 imgDiv'>
+            <div class='col-lg-6 d-flex justify-content-center my-auto mt-2 mt-lg-0 px-0 px-lg-5 imgDiv' data-aos="zoom-in-up"  >
                 <div class='imgContainer'>
                     <img src="{{ asset('Images/Socials/socials.jpg') }}" alt="" class="img-fluid" />
                 </div>

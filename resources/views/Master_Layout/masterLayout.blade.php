@@ -36,5 +36,8 @@
     @include('Components.Fixed.footer')
 
 </body>
+<script>
+    AOS.init();
+</script>
 
 </html>

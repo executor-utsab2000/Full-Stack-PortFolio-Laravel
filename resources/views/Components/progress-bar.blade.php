@@ -22,7 +22,7 @@
 </style>
 
 
-<div class="mt-4 mb-1">
+<div class="mt-4 mb-1" >
     <div class="progressTitle">{{ $languageName }}</div>
     <div class="progress" role="progressbar">
         <div class="progress-bar" style="width: {{ $progressPercentage }}%">{{ $progressPercentage }}%</div>

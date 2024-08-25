@@ -26,7 +26,7 @@
         <div class="row">
 
 
-            <div class="col-lg-6 d-flex justify-content-center my-auto  px-0 px-lg-5 imgDiv">
+            <div class="col-lg-6 d-flex justify-content-center my-auto  px-0 px-lg-5 imgDiv" data-aos="zoom-in-up">
                 <div class="imgContainer">
                     <img src="{{ asset('Images/hobbies/hobbies.gif') }}" alt="" />
                 </div>
@@ -34,17 +34,17 @@
 
 
 
-            <div class="col-lg-6 d-flex justify-content-center flex-column px-3 px-lg-5">
+            <div class="col-lg-6 d-flex justify-content-center flex-column px-3 px-lg-5" data-aos="zoom-in-up">
                 <x-section-header heading="Hobbies" subHeading="My field of mind refreshment & break"
                     icon="fa-solid fa-champagne-glasses" />
 
 
 
-                <div class="mt-5 cardContent">
+                <div class="mt-5 cardContent" >
 
                     <div class="row">
                         @foreach ($hobbyData as $hobby)
-                            <div class="col-md-6 d-flex justify-content-center my-3">
+                            <div class="col-md-6 d-flex justify-content-center my-3" data-aos="zoom-in-up">
                                 <x-hobby-card :hobbyImage="$hobby->hobby_image" :caption="$hobby->hobby_name" />
                             </div>
                         @endforeach

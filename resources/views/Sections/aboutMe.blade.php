@@ -54,7 +54,7 @@
 
 
 
-            <div class='col-lg-6 d-flex justify-content-lg-center my-auto  px-0 px-lg-5 imgDiv'>
+            <div class='col-lg-6 d-flex justify-content-lg-center my-auto  px-0 px-lg-5 imgDiv' data-aos="zoom-in-up">
                 <div class='imgContainer'>
                     <img src="{{ asset('Images/aboutVideo.gif') }}" alt="" />
                     <div>
@@ -65,7 +65,7 @@
 
 
 
-            <div class="col-lg-6 d-flex justify-content-center flex-column px-3 px-lg-5">
+            <div class="col-lg-6 d-flex justify-content-center flex-column px-3 px-lg-5" data-aos="zoom-in-up">
 
                 <x-section-header 
                         heading="about me" 
@@ -74,7 +74,7 @@
                 />
 
 
-                <div class='mt-5 desc'>
+                <div class='mt-5 desc' data-aos="zoom-in-up">
                     <p>Creative and detail-oriented Web Designer with a strong passion for creating visually stunning
                         and user-friendly websites being well versed with the knowledge I have gained and am confident
                         in my field. I also designed several websites in my Project some of which are mentioned below. I

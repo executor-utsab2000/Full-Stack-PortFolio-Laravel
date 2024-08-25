@@ -38,17 +38,17 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-12 d-flex justify-content-center flex-column">
+            <div class="col-12 d-flex justify-content-center flex-column" data-aos="zoom-in-up">
                 <x-section-header heading="Contact" subHeading=" Don't be shy, Hit me up !!"
                     icon="fa-solid fa-hand-point-down" />
             </div>
 
 
-            <div class="container w-75">
+            <div class="container w-75" data-aos="zoom-in-up">
                 <div class="row px-0 mx-0">
                     <div class="col-lg-6 content">
                         <div class="row">
-                            <div class="col-6 my-auto d-flex justify-content-center ">
+                            <div class="col-6 my-auto d-flex justify-content-center " >
                                 <i class="fa-solid fa-map-location-dot"></i>
                             </div>
                             <div class="col-6 d-flex justify-content-center flex-column">
@@ -72,7 +72,7 @@
             </div>
 
 
-            <div class="col-12 my-3 d-flex justify-content-center contactBtn">
+            <div class="col-12 my-3 d-flex justify-content-center contactBtn" data-aos="zoom-in-up">
                 <a href="{{ route('contactForm') }}" target="__blank">
                     <button class="btn">
                         Click here to get in touch

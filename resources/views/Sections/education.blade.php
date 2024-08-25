@@ -3,11 +3,11 @@
             <div class="row">
 
 
-                <div class="col-lg-6 d-flex justify-content-center flex-column px-3 px-lg-5">
+                <div class="col-lg-6 d-flex justify-content-center flex-column px-3 px-lg-5" data-aos="zoom-in-up">
                     <x-section-header heading="education" subHeading=" Education I Possess"
                         icon="fa-solid fa-graduation-cap" />
 
-                    <div class='row mt-5 desc'>
+                    <div class='row mt-5 desc' data-aos="zoom-in-up">
                         <div class="accordion" id="accordionExample">
 
                             @foreach ($educationData as $data)
@@ -28,7 +28,7 @@
 
                 <div
                     class='col-lg-6 d-flex justify-content-center my-auto mt-2 mt-lg-0 px-0 px-lg-5
-                    imgDiv'>
+                    imgDiv' data-aos="zoom-in-up">
                     <div class='imgContainer'>
                         <img src="{{ asset('Images/education.gif') }}" alt="" />
                     </div>

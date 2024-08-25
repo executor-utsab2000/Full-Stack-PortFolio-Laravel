@@ -50,14 +50,14 @@
     <div class="container">
         <div class="row">
 
-            <div class='col-12 d-flex justify-content-center flex-column my-auto mt-2 mt-lg-0 px-0 px-lg-5 '>
+            <div class='col-12 d-flex justify-content-center flex-column my-auto mt-2 mt-lg-0 px-0 px-lg-5 ' data-aos="zoom-in-up">
                 <x-section-header heading="Skills" subHeading="Technical and Soft Skills I Aquire"
                     icon="fa-solid fa-award" />
             </div>
 
             <div class="col-12 mt-4">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in-up">
                         <div class="skillContainer">
                             <div class="skillSubHeading">Soft Skills <i class="fa-solid fa-users-line ms-2"></i></div>
                             @foreach ($softSkills as $item)
@@ -67,7 +67,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8" data-aos="zoom-in-up">
                         <div class="skillContainer">
                             <div class="skillSubHeading">Technical Skills <i class="fa-solid fa-microchip ms-2"></i>
                             </div>

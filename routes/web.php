@@ -16,3 +16,8 @@ Route::controller(FetchAllDataController::class)->group(function () {
 });
 
 Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormSubmit');
+
+
+
+
+Route::get('/1' , [FetchAllDataController::class , 'getProjectSectionData']);

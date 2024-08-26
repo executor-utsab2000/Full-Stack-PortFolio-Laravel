@@ -6,12 +6,13 @@
 
 
 
-
 @section('content')
     @include('Sections.landing', ['languages' => $languages])
     @include('Sections.aboutMe')
     @include('Sections.skills', ['languages' => $languages])
     @include('Sections.education', ['educationData' => $educationData])
+    @include('Sections.projects', ['projects' => $projects])
+
     @include('Sections.hobbies', ['hobbyData' => $hobbyData])
     @include('Sections.social', ['socialData' => $socialData])
     @include('Sections.getInTouch')

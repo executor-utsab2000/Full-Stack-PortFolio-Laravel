@@ -45,16 +45,19 @@ class FetchAllDataController extends Controller
 
     public function getProjectSectionData()
     {
-        $categoryNames = DB::table('categories')->select('categories_name')->get();
+        $categoryNames = DB::table('categories')->select('categories_name', 'categories_id')->get();
 
         $category_project_data = DB::table('categories')->get();
         foreach ($category_project_data as $category) {
             // $categoryId[] =  $category->categories_id;
-            $projects = DB::table('projects')->where('project_category', "$category->categories_id")->get();
+            $projects = DB::table('projects')
+                ->select('project_id', 'project_name', 'project_description', 'project_languages', 'project_backgroundImage', 'project_category', 'project_sourceCode_github')
+                ->where('project_category', "$category->categories_id")
+                ->get();
             $category->projects = $projects;
         }
 
-        return compact('category_project_data' , 'categoryNames');
+        return compact('category_project_data', 'categoryNames');
     }
 
 
@@ -72,7 +75,7 @@ class FetchAllDataController extends Controller
             'socialData' => $this->getSocial(),
             'languages' => $this->getLanguages(),
             'navBarData' => $this->getCategories_Project(),
-            'projects' => $this->getProjectSectionData() ,
+            'projects' => $this->getProjectSectionData(),
         ]);
     }
 

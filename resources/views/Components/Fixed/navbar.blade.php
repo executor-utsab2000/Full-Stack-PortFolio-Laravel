@@ -73,7 +73,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link px-4 dropdown-toggle" data-bs-auto-close="outside" href="" role="button"
+                    <a class="nav-link px-4 dropdown-toggle" data-bs-auto-close="outside" href="{{ route('home') }}#projects" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Projects
                     </a>
@@ -84,7 +84,7 @@
                                     href="">{{ $category->categories_name }}</a>
                                 <ul class="dropdown-menu">
                                     @foreach ($category->projects as $project)
-                                        <li><a class="nav-link subMenu" href="">{{ $project->project_name }}</a></li>
+                                        <li><a class="nav-link subMenu" href="{{ route('projectDetailsPage' , $project->project_id) }}">{{ $project->project_name }}</a></li>
                                     @endforeach
                                 </ul>
                                 </a>
@@ -111,3 +111,14 @@
         </div>
     </div>
 </nav>
+
+{{-- @foreach ($navBarData as $category)
+    <h2> {{ $category->categories_name }}</h2>
+
+
+    @foreach ($category->projects as $project)
+        @php
+            var_dump($project)
+        @endphp
+    @endforeach
+@endforeach --}}

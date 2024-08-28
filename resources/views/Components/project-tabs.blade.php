@@ -67,8 +67,9 @@
     }
 
     .projSummary .languageUsed img {
-        height: 30px;
+        height: 20px;
         margin: 0 0.3rem;
+        filter: drop-shadow(5px 5px 7px #000000);
     }
 
     .btnDiv .btn {
@@ -77,7 +78,8 @@
         font-size: 0.8rem;
         color: black;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        background-color: whitesmoke
+        background-color: whitesmoke;
+        width: 10rem;
     }
 
     .btnDiv i {
@@ -119,33 +121,33 @@
                             <div class="description mb-3">{{ $item->project_description }} </div>
                             <div class="languageUsed my-5">
                                 <div class="row">
-                                    <div class="col-1">Language Used </div>
+                                    <div class="col-2">Language Used </div>
                                     <div class="col-1"><i class="fa-solid fa-grip-lines-vertical mx-3"></i> </div>
-                                    <div class="col-10 d-flex justify-content-around flex-wrap">
-                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                                            alt="" class="img-fluid mb-2">
-                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                                            alt="" class="img-fluid mb-2">
-                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                                            alt="" class="img-fluid mb-2">
-                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                                            alt="" class="img-fluid mb-2">
-                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                                            alt="" class="img-fluid mb-2">
-                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                                            alt="" class="img-fluid mb-2">
+                                    <div class="col-md-9 my-2 my-md-0 d-flex justify-content-around flex-wrap">
+
+                                        @foreach (json_decode($item->project_languages) as $projImgs)
+                                            <img src='{{ asset("Images/language/$projImgs") }}' alt=""
+                                                class="img-fluid mb-2">
+                                        @endforeach
+
                                     </div>
                                     <div class="col-8 mx-auto btnDiv mt-5 d-flex justify-content-between">
-                                        <a href="" class="nav-link">
-                                            <button class="btn">
-                                                <i class="fa-brands fa-github me-2"></i></i>Source Code
-                                            </button>
-                                        </a>
-                                        <a href="" class="nav-link">
-                                            <button class="btn">
-                                                <i class="fa-solid fa-circle-info me-2"></i>Case Study
-                                            </button>
-                                        </a>
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center my-2 my-md-0">
+                                                <a href="" class="nav-link">
+                                                    <button class="btn">
+                                                        <i class="fa-brands fa-github me-2"></i></i>Source Code
+                                                    </button>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 d-flex justify-content-center my-2 my-md-0">
+                                                <a href="{{ route('projectDetailsPage' , $item->project_id ) }}" class="nav-link">
+                                                    <button class="btn">
+                                                        <i class="fa-solid fa-circle-info me-2"></i>Case Study
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

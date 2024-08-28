@@ -87,7 +87,7 @@
                         <div class='row techarea'>
                             <div class="col-3 my-auto">
                                 <span>𝗧𝗲𝗰𝗵 𝗦𝘁𝗮𝗰𝗸</span>
-                                <span class="mx-3"><i class="fa-solid fa-grip-lines-vertical"></i></span>
+                                <span class="mx-2"><i class="fa-solid fa-grip-lines-vertical"></i></span>
                             </div>
                             <div class="col-9 ">
                                 <div class="row">

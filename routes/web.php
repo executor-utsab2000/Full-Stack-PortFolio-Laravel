@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::controller(FetchAllDataController::class)->group(function () {
     Route::get('/', 'index')->name('home');
     Route::get('/contact', 'ContactForm')->name('contactForm');
+    Route::get('//projectDetailsPage/project_id/{id}', 'projectData')->name('projectDetailsPage');
 });
 
 Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormSubmit');
@@ -20,4 +21,12 @@ Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormS
 
 
 
-Route::get('/1' , [FetchAllDataController::class , 'getProjectSectionData']);
+
+
+
+
+
+// trials
+
+// Route::get('/a', [FetchAllDataController::class, 'formData']);
+// Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');

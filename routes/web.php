@@ -28,5 +28,5 @@ Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormS
 
 // trials
 
-// Route::get('/a', [FetchAllDataController::class, 'formData']);
-// Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');
+Route::get('/a', [FetchAllDataController::class, 'formData']);
+Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');

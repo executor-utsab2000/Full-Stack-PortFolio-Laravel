@@ -109,7 +109,7 @@
                 <div class="row">
                     <div class="col-md-5 my-auto {{ $orderImg % 2 == 0 ? 'order-lg-2   ' : '' }}">
                         <div class="imgContainerProj">
-                            <img src="https://static.vecteezy.com/system/resources/thumbnails/041/038/335/small_2x/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
+                            <img src='{{ asset("Images/Projects Backgrounds/$item->project_backgroundImage") }}'
                                 alt="" class='image'>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                                     <div class="col-1"><i class="fa-solid fa-grip-lines-vertical mx-3"></i> </div>
                                     <div class="col-md-9 my-2 my-md-0 d-flex justify-content-around flex-wrap">
 
-                                        @foreach (json_decode($item->project_languages) as $projImgs)
+                                        @foreach ($item->imageArray as $projImgs)
                                             <img src='{{ asset("Images/language/$projImgs") }}' alt=""
                                                 class="img-fluid mb-2">
                                         @endforeach
@@ -141,7 +141,8 @@
                                                 </a>
                                             </div>
                                             <div class="col-md-6 d-flex justify-content-center my-2 my-md-0">
-                                                <a href="{{ route('projectDetailsPage' , $item->project_id ) }}" class="nav-link">
+                                                <a href="{{ route('projectDetailsPage', $item->project_id) }}"
+                                                    class="nav-link">
                                                     <button class="btn">
                                                         <i class="fa-solid fa-circle-info me-2"></i>Case Study
                                                     </button>

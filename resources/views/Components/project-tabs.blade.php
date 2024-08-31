@@ -86,6 +86,8 @@
         font-size: 1rem;
         margin: auto
     }
+
+    
 </style>
 
 
@@ -125,16 +127,15 @@
                                     <div class="col-1"><i class="fa-solid fa-grip-lines-vertical mx-3"></i> </div>
                                     <div class="col-md-9 my-2 my-md-0 d-flex justify-content-around flex-wrap">
 
-                                        @foreach ($item->imageArray as $projImgs)
-                                            <img src='{{ asset("Images/language/$projImgs") }}' alt=""
-                                                class="img-fluid mb-2">
+                                        @foreach ($item->project_languages as $projImgs)
+                                        <img src='{{ asset("Images/language/$projImgs->languageImage") }}' alt="" class="img-fluid mb-2">    
                                         @endforeach
 
                                     </div>
                                     <div class="col-8 mx-auto btnDiv mt-5 d-flex justify-content-between">
                                         <div class="row">
                                             <div class="col-md-6 d-flex justify-content-center my-2 my-md-0">
-                                                <a href="" class="nav-link">
+                                                <a href="{{ $item->project_sourceCode_github }}" class="nav-link" target="__blank">
                                                     <button class="btn">
                                                         <i class="fa-brands fa-github me-2"></i></i>Source Code
                                                     </button>

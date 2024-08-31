@@ -5,7 +5,6 @@
         <div style="margin-bottom: 1rem">
             <span class="pe-3">{{ $item->language_name }}</span>
             <input type="checkbox" name="languages[]" class="language" id="" value="{{ $item->language_id }}">
-            <input type="text" name="languagesKnown[]" class="languagePercentage" id="" value="" disabled>
         </div>
     @endforeach
 
@@ -16,7 +15,7 @@
 </form>
 
 
-<script>
+{{-- <script>
     let language = document.querySelectorAll('.language')
     // console.log(language);
 
@@ -26,4 +25,4 @@
             elm.parentNode.children[2].removeAttribute('disabled')
         });
     });
-</script>
+</script> --}}

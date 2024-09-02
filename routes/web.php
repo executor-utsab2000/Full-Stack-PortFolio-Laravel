@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\AdminHomeDasBoardController;
 use App\Http\Controllers\FetchAllDataController;
 use App\Http\Controllers\UserDataInsertController;
 use Illuminate\Support\Facades\Route;
@@ -18,9 +19,11 @@ Route::controller(FetchAllDataController::class)->group(function () {
 
 Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormSubmit');
 
+// --------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------
 
-
-
+Route::get('/admin' ,[ AdminHomeDasBoardController::class , 'adminDashBoardData']);
 
 
 
@@ -28,5 +31,7 @@ Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormS
 
 // trials
 
+// Route::view('/tryAdmin' , 'ADMIN.getChartData');
 Route::get('/a', [FetchAllDataController::class, 'formData']);
 Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');
+Route::get('/tryAdmin' ,[ AdminHomeDasBoardController::class , 'getChartData']);

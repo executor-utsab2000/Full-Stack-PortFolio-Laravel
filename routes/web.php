@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AdminHomeDasBoardController;
 use App\Http\Controllers\FetchAllDataController;
+use App\Http\Controllers\LanguageManageController;
 use App\Http\Controllers\UserDataInsertController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,16 @@ Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormS
 // --------------------------------------------------------------------------------------------------------------
 // --------------------------------------------------------------------------------------------------------------
 
-Route::get('/admin' ,[ AdminHomeDasBoardController::class , 'adminDashBoardData']);
+
+Route::get('/admin', [AdminHomeDasBoardController::class, 'adminDashBoardData'])->name('admin');
+
+
+Route::resource('language', LanguageManageController::class);
+
+
+
+
+
 
 
 
@@ -31,7 +41,5 @@ Route::get('/admin' ,[ AdminHomeDasBoardController::class , 'adminDashBoardData'
 
 // trials
 
-Route::view('/tryAdmin' , 'ADMIN.MasterLayout.masterLayout');
-// Route::get('/a', [FetchAllDataController::class, 'formData']);
-// Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');
-// Route::get('/tryAdmin' ,[ AdminHomeDasBoardController::class , 'getChartData']);
+Route::view('/tryAdmin', 'ADMIN.MasterLayout.masterLayout');
+

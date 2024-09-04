@@ -28,32 +28,26 @@
         </div>
 
         @include('ADMIN.Components.Fixed Components.navbar')
-
         {{-- nav section end --}}
 
 
+        {{-- --------------------------------------------------------------------------------------------------------------------------- --}}
+        {{-- --------------------------------------------------------------------------------------------------------------------------- --}}
+
+        <div class="container">
+            <div class="adminPageHeader">@yield('pageHeader')</div>
 
 
 
+            <div class="adminContent">
+                @yield('adminContent')
+            </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
         {{-- ----------------------------------------------------- --}}
+
         <div class="row mt-5">
-            {{-- @include('Components.Fixed.footer') --}}
+            @include('Components.Fixed.footer')
         </div>
     </div>
 </body>

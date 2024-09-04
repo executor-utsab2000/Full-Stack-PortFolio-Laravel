@@ -36,7 +36,7 @@
                     <div class="contentContainer">
                         <div class="row">
                             <div class="col-md-4  col-sm-6 my-2">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('language.index') }}" class="nav-link">
                                     <div class="contentContainer rightTop">
                                         <div class="contentHeader"><i class="fa-solid fa-language"></i>Languages Known
                                         </div>

@@ -15,17 +15,22 @@ chartData.forEach((elm) => {
 new Chart(chartContact, {
     type: "bar",
     data: {
-        labels: ["Total" , 'Contacted' , 'Not Contacted'],
+        labels: ["Total", "Contacted", "Not Contacted"],
         datasets: [
             {
                 label: "Contact Users",
-                data: [contactInfoData.total , contactInfoData.contacted , contactInfoData.notContacted],
+                data: [
+                    contactInfoData.total,
+                    contactInfoData.contacted,
+                    contactInfoData.notContacted,
+                ],
                 borderWidth: 2,
-                backgroundColor:['#ef233c' , '#ffbe0b' , '#3a86ff']
+                backgroundColor: ["#ef233c", "#ffbe0b", "#3a86ff"],
             },
         ],
     },
     options: {
+        indexAxis: "y",
         scales: {
             y: {
                 beginAtZero: true,

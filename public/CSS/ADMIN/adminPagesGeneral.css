@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Lilita+One&family=Nerko+One&family=Pirata+One&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Dela+Gothic+One&family=Lilita+One&family=Nerko+One&family=Pirata+One&family=Protest+Guerrilla&display=swap');
+
+
+
+
+
+
+
 
 .adminAllPageTopNavbar {
+    background-color: white;
     padding: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: fixed;
@@ -40,17 +48,15 @@
     letter-spacing: 3px;
 }
 
-.menuDiv {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+
+
+.adminPageHeader{
+    margin-top: 9rem;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
-.menuDiv button {
-    padding: 8px 13px;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #ffba08;
-    font-size: 1.1rem;
-    color: red;
+.adminContent{
+    margin-top: 2rem;
 }

@@ -1,4 +1,19 @@
 <style>
+    .menuDiv {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .menuDiv button {
+        padding: 8px 13px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #ffba08;
+        font-size: 1.1rem;
+        color: red;
+    }
+
     .menuBarSide {
         max-width: 320px !important;
     }
@@ -81,8 +96,7 @@
 </div>
 
 
-<div class="offcanvas offcanvas-end menuBarSide" tabindex="-1" id="offcanvasRight"
-    aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end menuBarSide" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
         <div class="d-flex">
             <img src="https://png.pngtree.com/png-clipart/20240202/original/pngtree-alphabet-u-written-down-with-gold-png-image_14215548.png"
@@ -96,7 +110,7 @@
     </div>
     <div class="offcanvas-body">
 
-        <a href="" class="nav-link">
+        <a href="{{ route('admin') }}" class="nav-link">
             <div class="menuTabs my-2">
                 <span class="icon my-auto">
                     <i class="fa fa-dashboard" aria-hidden="true"></i>
@@ -105,7 +119,7 @@
             </div>
         </a>
 
-        <a href="" class="nav-link">
+        <a href="{{ route('language.index') }}" class="nav-link">
             <div class="menuTabs my-2">
                 <span class="icon my-auto">
                     <i class="fa-solid fa-language"></i>

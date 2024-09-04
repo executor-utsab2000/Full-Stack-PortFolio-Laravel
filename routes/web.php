@@ -31,7 +31,7 @@ Route::get('/admin' ,[ AdminHomeDasBoardController::class , 'adminDashBoardData'
 
 // trials
 
-// Route::view('/tryAdmin' , 'ADMIN.getChartData');
-Route::get('/a', [FetchAllDataController::class, 'formData']);
-Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');
-Route::get('/tryAdmin' ,[ AdminHomeDasBoardController::class , 'getChartData']);
+Route::view('/tryAdmin' , 'ADMIN.MasterLayout.masterLayout');
+// Route::get('/a', [FetchAllDataController::class, 'formData']);
+// Route::post('/langAdd', [FetchAllDataController::class, 'langAdd'])->name('langAdd');
+// Route::get('/tryAdmin' ,[ AdminHomeDasBoardController::class , 'getChartData']);

@@ -27,7 +27,6 @@ class AdminHomeDasBoardController extends Controller
             'projects' => $projects,
             'hobbies' => $hobbies,
             'socials' => $socials,
-            'recentContact' => $recentContact,
         ];
     }
 
@@ -55,57 +54,26 @@ class AdminHomeDasBoardController extends Controller
 
 
 
-    public function contactDetails(){
+    public function contactDetails()
+    {
         return DB::table('contact_form')
-                    ->select('contact_user_name' , 'contact_user_phone')
-                    ->limit(3)
-                    ->get();
+            ->select('contact_user_name', 'contact_user_phone')
+            ->limit(3)
+            ->get();
     }
 
+    public function contactInfoSectionDetails()
+    {
+        $total = DB::table('contact_form')->count();
+        $contacted = DB::table('contact_form')->where('status', 'contacted')->count();
+        $notContacted = DB::table('contact_form')->where('status', 'not contacted')->count();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return [
+            'total' => $total,
+            'contacted' => $contacted,
+            'notContacted' => $notContacted
+        ];
+    }
 
 
 
@@ -123,6 +91,7 @@ class AdminHomeDasBoardController extends Controller
             'chartData' => $this->getChartData(),
             'categoryToProject' => $this->categoryToProject(),
             'contactForm' => $this->contactDetails(),
+            'contactInfoSection' => $this->contactInfoSectionDetails(),
         ]);
     }
 }

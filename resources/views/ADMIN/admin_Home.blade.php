@@ -149,6 +149,45 @@
 
             </div>
 
+            <a href="" class="nav-link">
+                <div class="contentContainer mt-3 mb-4">
+                    <div class="sectionHeader">Contact Info</div>
+                    <div class="row">
+                        <div class="col-lg-7 my-auto">
+                            <div class="contentContainer">
+                                <div class="row">
+                                    <div class="col-sm-6 mx-auto my-2">
+                                        <div class="contentContainer">
+                                            <div class="sectionHeader subSectionHeader">Total People Contacted</div>
+                                            <div class="contactInfoCounts text-danger">10</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto my-2">
+                                        <div class="contentContainer">
+                                            <div class="sectionHeader subSectionHeader">Response Given to People
+                                                Contacted</div>
+                                            <div class="contactInfoCounts text-danger">10</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mx-auto my-2">
+                                        <div class="contentContainer">
+                                            <div class="sectionHeader subSectionHeader">Response Not yet Given to
+                                                People Contacted</div>
+                                            <div class="contactInfoCounts text-danger">10</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="contentContainer">
+                                <canvas id="contactInfoDataChart">{{-- chart will go here --}}</canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
         </div>
 
         <div class="row">
@@ -160,49 +199,9 @@
 <script>
     // convert php data to js data
     const chartData = @json($chartData);
-
-    const ctx = document.getElementById("chartData");
-    const languageNameArray = [];
-    const languagePercentageArray = [];
-
-    const array = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-        "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
-    ]
-
-
-    chartData.forEach(elm => {
-        languageNameArray.push(elm.language_name)
-        languagePercentageArray.push(elm.language_knowledge)
-    });
-
-    console.log(languageNameArray);
-    console.log(languagePercentageArray);
-
-    // function hexCodeGenerate(){
-
-    // }
-
-
-
-    new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: languageNameArray,
-            datasets: [{
-                label: "Name of Languages",
-                data: languagePercentageArray,
-                borderWidth: 2,
-
-            }, ],
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                },
-            },
-        },
-    });
+    const contactInfoData = @json($contactInfoSection);
 </script>
+<script src="{{ asset('JS/ADMIN/chartLanguages.js') }}"></script>
+<script src="{{ asset('JS/ADMIN/chartContact.js') }}"></script>
 
 </html>

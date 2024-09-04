@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Lilita+One&family=Nerko+One&family=Pirata+One&family=Protest+Guerrilla&display=swap');
+
+.adminAllPageTopNavbar {
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    top: 00;
+    width: 100%;
+    z-index: 10;
+}
+
+.adminAllPageTopNavbar img {
+    width: 6vw;
+    min-width: 60px;
+    filter: drop-shadow(5px 5px 6px #000000);
+}
+
+.navContent div:first-child {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 800;
+    color: #00bbf9;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.navContent div:nth-child(2) {
+    font-weight: 700;
+    color: #acb0b5;
+    font-size: 0.82rem;
+    letter-spacing: 3px;
+    font-family: "Pirata One", system-ui;
+}
+
+.navContent div:last-child {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.menuDiv {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.menuDiv button {
+    padding: 8px 13px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffba08;
+    font-size: 1.1rem;
+    color: red;
+}

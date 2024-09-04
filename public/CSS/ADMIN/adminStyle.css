@@ -1,106 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Matemasie&family=Nerko+One&display=swap');
 
-.adminHome{
-margin-top: 2rem;
+.adminHome {
+    margin-top: 2rem;
 }
 
-.adminHome .contentContainer{
+.adminHome .contentContainer {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.mainHeader{
+.mainHeader {
     font-weight: 800;
     color: #1b263b;
-    font-family: "Matemasie", sans-serif; 
+    font-family: "Matemasie", sans-serif;
     font-size: 2rem;
-    letter-spacing: 2px;   
-    word-spacing: 5px;   
+    letter-spacing: 2px;
+    word-spacing: 5px;
 }
-    
-.subHeader{
+
+.subHeader {
     margin-top: 0.5rem;
     font-family: "Nerko One", cursive;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-.header3{
+.header3 {
     font-family: "Kanit", sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 1rem;
 }
 
-.adminHome .imgContainer{
+.adminHome .imgContainer {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 50%;
-    padding: 5px;   
+    padding: 5px;
 }
 
-.adminHome .imgContainer img{
+.adminHome .imgContainer img {
     border-radius: 50%;
 }
 
-.contentHeader{
+.contentHeader {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: capitalize;
 }
 
-.contentContent{
+.contentContent {
     font-size: 0.7rem;
     font-weight: 700;
 }
 
-.adminTopLeftHeader{
+.adminTopLeftHeader {
     height: 100%;
 }
 
-.rightTop i{
+.rightTop i {
     color: red;
     font-size: 1.3rem;
     margin-right: 0.5rem;
 }
-.rightTop:hover{
+
+.rightTop:hover {
     background-color: #adb5bd;
 }
 
-.imageChartContainer{
+.imageChartContainer {
     display: flex;
     justify-content: center;
     place-items: center;
 }
 
 
-.sectionHeader{
+.sectionHeader {
     font-family: "Nerko One", cursive;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
+.subSectionHeader {
+    font-size: 1rem;
+}
 
-.categoryToProject tbody tr td:nth-child(1){
+
+
+.categoryToProject tbody tr td:nth-child(1) {
     font-weight: 700;
     font-size: 0.8rem;
 }
 
-.categoryToProject tbody tr td:nth-child(2){
+.categoryToProject tbody tr td:nth-child(2) {
     font-weight: 700;
     font-size: 0.65rem;
 }
-.contactTable tbody tr td:nth-child(1){
+
+.contactTable tbody tr td:nth-child(1) {
     font-weight: 700;
     font-size: 0.7rem;
 }
 
-.contactTable tbody tr td:nth-child(2){
+.contactTable tbody tr td:nth-child(2),
+.contactInfoCounts {
     font-weight: 700;
     font-size: 0.6rem;
 }
 
-.chartData{
-    height:15rem ;
+.chartData {
+    height: 15rem;
     width: 100%;
 }

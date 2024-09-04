@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class LanguageManageController extends Controller
+class EducationManageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $languageData = DB::table('languages')->get();
-        return view('ADMIN.PAGES.languageIndex', compact('languageData'));
+        $educationData = DB::table('education')->get();
+        return view('ADMIN.PAGES.educationIndex', compact('educationData'));
     }
 
     /**
@@ -21,7 +21,7 @@ class LanguageManageController extends Controller
      */
     public function create()
     {
-       echo 'form ';
+        //
     }
 
     /**
@@ -37,7 +37,7 @@ class LanguageManageController extends Controller
      */
     public function show(string $id)
     {
-        return $id;
+        //
     }
 
     /**
@@ -45,7 +45,7 @@ class LanguageManageController extends Controller
      */
     public function edit(string $id)
     {
-        return $id;
+        //
     }
 
     /**
@@ -53,7 +53,7 @@ class LanguageManageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        return $request;
+        //
     }
 
     /**
@@ -61,6 +61,6 @@ class LanguageManageController extends Controller
      */
     public function destroy(string $id)
     {
-        return $id;
+        //
     }
 }

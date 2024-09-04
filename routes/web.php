@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AdminHomeDasBoardController;
+use App\Http\Controllers\EducationManageController;
 use App\Http\Controllers\FetchAllDataController;
 use App\Http\Controllers\LanguageManageController;
 use App\Http\Controllers\UserDataInsertController;
@@ -29,6 +30,7 @@ Route::get('/admin', [AdminHomeDasBoardController::class, 'adminDashBoardData'])
 
 
 Route::resource('language', LanguageManageController::class);
+Route::resource('education', EducationManageController::class);
 
 
 

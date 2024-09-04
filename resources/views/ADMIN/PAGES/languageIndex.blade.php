@@ -4,36 +4,31 @@
     Language
 @endsection
 
-@section('css_js')
-    <link rel="stylesheet" href="{{ asset('CSS/ADMIN/languageIndex.css') }}">
-@endsection
+@section('pageHeader', 'Language Details')
 
-
-
-@section('pageHeader')
-    Language Details
-@endsection
-
+@section('addBtnRoute', route('language.create'))
 
 @section('adminContent')
+
+
+
     <div class="languageIndex">
         @foreach ($languageData as $item)
             <div class="tabContents languageTabs my-3">
                 <div class="row">
-                    <div class="col-md-3 d-flex justify-content-center my-auto px-2 id">{{ $item->language_id }}</div>
-                    <div class="col-md-2 d-flex justify-content-center my-auto px-2 name">{{ $item->language_name }}</div>
-                    <div class="col-md-1 d-flex justify-content-center my-auto px-2 text-danger">
+                    <div class="col-md-3 d-flex justify-content-center my-2 my-md-auto px-2 id">{{ $item->language_id }}
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center my-2 my-md-auto px-2 name">{{ $item->language_name }}
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-center my-2 my-md-auto px-2 text-danger">
                         {{ $item->language_knowledge }}</div>
-                    <div class="col-md-3 d-flex justify-content-center my-auto px-2">
+                    <div class="col-md-3 d-flex justify-content-center my-2 my-md-auto px-2">
                         <div class="adminpanel imgContainer">
-                            <img src='{{ asset("Images/language/$item->language_image") }}' alt=""
-                                class="img-fluid">
+                            <img src='{{ asset("Images/language/$item->language_image") }}' alt="" class="img-fluid">
                         </div>
                     </div>
-                    <div class="col-md-3 d-flex justify-content-around my-auto px-2 icons">
-                        <a href="{{ route('language.show', $item->language_id) }}" class="nav-link">
-                            <button class="btn"><i class="fa-solid fa-circle-info"></i></button>
-                        </a>
+                    <div class="col-md-2 d-flex justify-content-around my-2 my-md-auto px-2 icons">
+
                         <a href="{{ route('language.edit', $item->language_id) }}" class="nav-link">
                             <button class="btn"><i class="fa-solid fa-pen-to-square"></i></button>
                         </a>

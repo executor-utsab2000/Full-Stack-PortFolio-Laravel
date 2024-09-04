@@ -50,13 +50,70 @@
 
 
 
-.adminPageHeader{
+.adminPageHeader {
     margin-top: 9rem;
     font-family: "Dela Gothic One", sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
-.adminContent{
+.adminContent {
     margin-top: 2rem;
+}
+
+.addIcon {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 2rem;
+}
+
+.addIcon button {
+    padding: 8px 13px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #ffba08;
+    font-size: 1.1rem;
+    color: red;
+}
+
+
+/* sections general */
+.tabContents {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    background-color: #fefae0;
+}
+
+.tabContents .imgContainer {
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.tabContents .imgContainer img {
+    border-radius: 50%;
+}
+
+.tabContents .icons button {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 10px 14px;
+    border-radius: 50%;
+    background-color: white;
+    color: red;
+}
+
+.tabContents .id {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.tabContents .name {
+    font-size: 0.8rem;
 }

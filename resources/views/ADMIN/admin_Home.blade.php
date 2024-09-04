@@ -45,7 +45,7 @@
                                 </a>
                             </div>
                             <div class="col-md-4  col-sm-6 my-2">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('education.index') }}" class="nav-link">
                                     <div class="contentContainer rightTop">
                                         <div class="contentHeader"><i class="fa-solid fa-user-graduate"></i>Education
                                         </div>

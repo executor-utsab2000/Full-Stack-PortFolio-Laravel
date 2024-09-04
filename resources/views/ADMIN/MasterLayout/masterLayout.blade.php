@@ -43,6 +43,14 @@
                 @yield('adminContent')
             </div>
 
+            <div class="addIcon">
+                <a href="@yield('addBtnRoute')">
+                    <button class="btn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </a>
+            </div>
+
         </div>
         {{-- ----------------------------------------------------- --}}
 

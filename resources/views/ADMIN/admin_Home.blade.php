@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="col-md-4  col-sm-6 my-2">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('category.index') }}" class="nav-link">
                                     <div class="contentContainer rightTop">
                                         <div class="contentHeader"><i class="fa-solid fa-list"></i>Categories</div>
                                         <div class="contentContent">{{ $countData['categories'] }}</div>
@@ -73,7 +73,7 @@
                                 </a>
                             </div>
                             <div class="col-md-4  col-sm-6 my-2">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('hobby.index') }}" class="nav-link">
                                     <div class="contentContainer rightTop">
                                         <div class="contentHeader"><i class="fa-solid fa-gamepad"></i>Hobbies</div>
                                         <div class="contentContent">{{ $countData['hobbies'] }}</div>
@@ -81,7 +81,7 @@
                                 </a>
                             </div>
                             <div class="col-md-4  col-sm-6 my-2">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('social.index') }}" class="nav-link">
                                     <div class="contentContainer rightTop">
                                         <div class="contentHeader"><i class="fa-solid fa-hashtag"></i>Socials</div>
                                         <div class="contentContent">{{ $countData['socials'] }}</div>
@@ -159,21 +159,24 @@
                                     <div class="col-sm-6 mx-auto my-2">
                                         <div class="contentContainer">
                                             <div class="sectionHeader subSectionHeader">Total People Contacted</div>
-                                            <div class="contactInfoCounts text-danger">{{ $contactInfoSection['total'] }}</div>
+                                            <div class="contactInfoCounts text-danger">
+                                                {{ $contactInfoSection['total'] }}</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 mx-auto my-2">
                                         <div class="contentContainer">
                                             <div class="sectionHeader subSectionHeader">Response Given to People
                                                 Contacted</div>
-                                            <div class="contactInfoCounts text-danger">{{ $contactInfoSection['contacted'] }}</div>
+                                            <div class="contactInfoCounts text-danger">
+                                                {{ $contactInfoSection['contacted'] }}</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 mx-auto my-2">
                                         <div class="contentContainer">
                                             <div class="sectionHeader subSectionHeader">Response Not yet Given to
                                                 People Contacted</div>
-                                            <div class="contactInfoCounts text-danger">{{ $contactInfoSection['notContacted'] }}</div>
+                                            <div class="contactInfoCounts text-danger">
+                                                {{ $contactInfoSection['notContacted'] }}</div>
                                         </div>
                                     </div>
                                 </div>

@@ -142,7 +142,7 @@
             </div>
         </a>
 
-        <a href="" class="nav-link">
+        <a href="{{ route('category.index') }}" class="nav-link">
             <div class="menuTabs my-2">
                 <span class="icon my-auto">
                     <i class="fa-solid fa-list"></i>
@@ -160,7 +160,7 @@
             </div>
         </a>
 
-        <a href="" class="nav-link">
+        <a href="{{ route('hobby.index') }}" class="nav-link">
             <div class="menuTabs my-2">
                 <span class="icon my-auto">
                     <i class="fa-solid fa-gamepad"></i>
@@ -169,7 +169,7 @@
             </div>
         </a>
 
-        <a href="" class="nav-link">
+        <a href="{{ route('social.index') }}" class="nav-link">
             <div class="menuTabs my-2">
                 <span class="icon my-auto">
                     <i class="fa-solid fa-hashtag"></i>

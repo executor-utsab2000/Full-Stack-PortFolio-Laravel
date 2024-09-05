@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactFormManageController;
 use App\Http\Controllers\HobbyManageController;
 use App\Http\Controllers\SocialManageController;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,7 @@ Route::resource('education', EducationManageController::class);
 Route::resource('category', CategoryManageController::class);
 Route::resource('social', SocialManageController::class);
 Route::resource('hobby', HobbyManageController::class);
+Route::resource('contact_form', ContactFormManageController::class);
 
 
 

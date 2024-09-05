@@ -178,7 +178,7 @@
             </div>
         </a>
 
-        <a href="" class="nav-link">
+        <a href="{{ route('contact_form.index') }}" class="nav-link">
             <div class="menuTabs my-2">
                 <span class="icon my-auto">
                     <i class="fa-solid fa-phone"></i>

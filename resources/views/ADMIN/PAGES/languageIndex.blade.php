@@ -1,12 +1,12 @@
 @extends('ADMIN.MasterLayout.masterLayout')
 
 @section('pageName')
-    Language
+    Contact Form
 @endsection
 
 
 
-@section('pageHeader', 'Language Details')
+@section('pageHeader', 'Contact Form Details')
 
 @section('addBtnRoute', route('language.create'))
 

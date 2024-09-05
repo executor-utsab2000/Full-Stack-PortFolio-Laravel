@@ -43,7 +43,7 @@
                 @yield('adminContent')
             </div>
 
-            <div class="addIcon">
+            <div class="addIcon @yield('addBtnDisplay')">
                 <a href="@yield('addBtnRoute')">
                     <button class="btn">
                         <i class="fa-solid fa-plus"></i>

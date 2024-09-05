@@ -149,7 +149,7 @@
 
             </div>
 
-            <a href="" class="nav-link">
+            <a href="{{ route('contact_form.index') }}" class="nav-link">
                 <div class="contentContainer mt-3 mb-4">
                     <div class="sectionHeader">Contact Info</div>
                     <div class="row">

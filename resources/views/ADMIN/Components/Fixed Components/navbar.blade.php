@@ -3,6 +3,7 @@
         position: fixed;
         bottom: 2rem;
         right: 2rem;
+        z-index: 5;
     }
 
     .menuDiv button {
@@ -12,6 +13,10 @@
         background-color: #ffba08;
         font-size: 1.1rem;
         color: red;
+    }
+
+    .menuDiv button:hover {
+        background-color: #ffba08;
     }
 
     .menuBarSide {

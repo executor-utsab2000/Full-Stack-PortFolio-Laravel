@@ -1,12 +1,17 @@
 <?php
 
+use App\Http\Controllers\HobbyManageController;
+use App\Http\Controllers\SocialManageController;
+use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\FetchAllDataController;
+use App\Http\Controllers\UserDataInsertController;
+
 
 use App\Http\Controllers\AdminHomeDasBoardController;
+use App\Http\Controllers\CategoryManageController;
 use App\Http\Controllers\EducationManageController;
-use App\Http\Controllers\FetchAllDataController;
 use App\Http\Controllers\LanguageManageController;
-use App\Http\Controllers\UserDataInsertController;
-use Illuminate\Support\Facades\Route;
 
 
 
@@ -31,6 +36,9 @@ Route::get('/admin', [AdminHomeDasBoardController::class, 'adminDashBoardData'])
 
 Route::resource('language', LanguageManageController::class);
 Route::resource('education', EducationManageController::class);
+Route::resource('category', CategoryManageController::class);
+Route::resource('social', SocialManageController::class);
+Route::resource('hobby', HobbyManageController::class);
 
 
 
@@ -43,5 +51,5 @@ Route::resource('education', EducationManageController::class);
 
 // trials
 
-Route::view('/tryAdmin', 'ADMIN.MasterLayout.masterLayout');
+// Route::view('/tryAdmin', 'ADMIN.MasterLayout.masterLayout');
 

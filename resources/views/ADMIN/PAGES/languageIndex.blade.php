@@ -4,6 +4,8 @@
     Language
 @endsection
 
+
+
 @section('pageHeader', 'Language Details')
 
 @section('addBtnRoute', route('language.create'))

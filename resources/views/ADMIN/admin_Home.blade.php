@@ -159,21 +159,21 @@
                                     <div class="col-sm-6 mx-auto my-2">
                                         <div class="contentContainer">
                                             <div class="sectionHeader subSectionHeader">Total People Contacted</div>
-                                            <div class="contactInfoCounts text-danger">10</div>
+                                            <div class="contactInfoCounts text-danger">{{ $contactInfoSection['total'] }}</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 mx-auto my-2">
                                         <div class="contentContainer">
                                             <div class="sectionHeader subSectionHeader">Response Given to People
                                                 Contacted</div>
-                                            <div class="contactInfoCounts text-danger">10</div>
+                                            <div class="contactInfoCounts text-danger">{{ $contactInfoSection['contacted'] }}</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 mx-auto my-2">
                                         <div class="contentContainer">
                                             <div class="sectionHeader subSectionHeader">Response Not yet Given to
                                                 People Contacted</div>
-                                            <div class="contactInfoCounts text-danger">10</div>
+                                            <div class="contactInfoCounts text-danger">{{ $contactInfoSection['notContacted'] }}</div>
                                         </div>
                                     </div>
                                 </div>

@@ -1,0 +1,27 @@
+.ProjectTabs .projectDescription {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    /* Number of lines to show */
+    max-height: 3em;
+    /* Line height multiplied by number of lines (e.g., 1.5em * 2 lines) */
+    line-height: 1.5em;
+    /* Line height */
+    font-size: 0.6rem;
+}
+
+.ProjectTabs .imgContainer{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ProjectTabs .imgContainer img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}

@@ -58,6 +58,16 @@
             @include('Components.Fixed.footer')
         </div>
     </div>
+
+    @if (session('message'))
+        <script>
+            Swal.fire({
+                icon: "success",
+                title: "Thank You",
+                text: @json(session('message'))
+            });
+        </script>
+    @endif
 </body>
 
 </html>

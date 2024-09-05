@@ -42,7 +42,6 @@
 
 @section('pageHeader', 'Contact Form Details')
 
-@section('addBtnRoute', route('contact_form.create'))
 @section('addBtnDisplay', 'd-none')
 
 @section('adminContent')
@@ -82,9 +81,9 @@
                         </div>
                     </div>
                     <div class="col-lg-1 icons">
-                        <form action="{{ route('contact_form.destroy', $item->contact_user_Id) }}">
+                        <form action="{{ route('contact_form.destroy', $item->contact_user_Id) }}" method="POST">
                             @csrf
-                            @method('delete')
+                            @method('delete')   
                             <button class="btn" type="submit"><i class="fa-solid fa-trash-can"></i></i></button>
                         </form>
                     </div>

@@ -64,7 +64,7 @@
                             </div>
 
                             <div class="col-md-4  col-sm-6 my-2">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('project.index') }}" class="nav-link">
                                     <div class="contentContainer rightTop">
                                         <div class="contentHeader"><i class="fa-solid fa-diagram-project"></i>Projects
                                         </div>

@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class ContactFormManageController extends Controller
+class ProjectManageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $contactData = DB::table('contact_form')->get();
-        return view('ADMIN/PAGES/contactFormIndex', compact('contactData'));
+        $projectData = DB::table('projects')->get();
+        return view('ADMIN/PAGES/projectIndex', compact('projectData')) ;
     }
 
     /**
@@ -53,13 +53,7 @@ class ContactFormManageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $updateData = DB::table('contact_form')
-            ->where('contact_user_Id', $id)
-            ->update(['status' => 'contacted']);
-
-        if ($updateData) {
-            return redirect()->route('contact_form.index')->with('message', 'User Contacted Successfully and status changed');
-        }
+        //
     }
 
     /**
@@ -67,12 +61,6 @@ class ContactFormManageController extends Controller
      */
     public function destroy(string $id)
     {
-        $deleteData = DB::table('contact_form')
-            ->where('contact_user_Id', $id)
-            ->delete();
-
-        if ($deleteData) {
-            return redirect()->route('contact_form.index')->with('message', 'User Contacted deleted successfully');
-        }
+        //
     }
 }

@@ -73,9 +73,9 @@
                     <div class="col-lg-2 status my-auto">
                         <span class="statusTxt">{{ $item->status }}</span>
                         <div class="ConfirmIfNotBtn mt-3 mb-2 {{ $item->status == 'contacted' ? 'd-none' : '' }}">
-                            <form action="{{ route('contact_form.update', $item->contact_user_Id) }}">
+                            <form action="{{ route('contact_form.update', $item->contact_user_Id) }}" method="POST">
                                 @csrf
-                                @method('update')
+                                @method('put')
                                 <button type="submit" class="btn py-2 px-4"><i class="fa-solid fa-phone me-2"></i> Contact
                                     User</button>
                             </form>

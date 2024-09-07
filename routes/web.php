@@ -58,5 +58,5 @@ Route::resource('project', ProjectManageController::class);
 
 // trials
 
-// Route::view('/tryAdmin', 'ADMIN.MasterLayout.masterLayout');
+Route::view('/tryAdmin', 'ADMIN.MasterLayout.AdminAddFormMasterLayout');
 

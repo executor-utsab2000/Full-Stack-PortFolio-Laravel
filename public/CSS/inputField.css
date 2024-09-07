@@ -20,7 +20,7 @@
     width: fit-content;
 }
 
-.coolinput input[type=text].input, textarea {
+.coolinput .input {
     padding: 0.8rem 1rem;
     font-size: 0.75rem;
     font-weight: 700;
@@ -35,7 +35,7 @@ textarea{
     font-size: 0.6rem;
 }
 
-.coolinput input[type=text].input:focus , textarea:focus {
+.coolinput input:focus {
     outline: none;
 }
 

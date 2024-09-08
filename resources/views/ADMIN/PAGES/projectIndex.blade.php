@@ -43,11 +43,11 @@
                             <button class="btn"><i class="fa-solid fa-circle-info"></i></button>
                         </a>
 
-                        <a href="{{ route('language.edit', $item->project_id) }}" class="nav-link">
+                        <a href="{{ route('project.edit', $item->project_id) }}" class="nav-link">
                             <button class="btn"><i class="fa-solid fa-pen-to-square"></i></button>
                         </a>
 
-                        <form action="{{ route('language.destroy', $item->project_id) }}">
+                        <form action="{{ route('project.destroy', $item->project_id) }}">
                             @csrf
                             @method('delete')
                             <button class="btn" type="submit"><i class="fa-solid fa-trash-can"></i></i></button>

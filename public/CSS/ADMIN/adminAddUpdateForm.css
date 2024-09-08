@@ -72,3 +72,8 @@
     width: 230px;
     border-radius: 50%;
 }
+
+.languageCheckBoxLabel{
+    font-weight: 600;
+    font-size: 0.8rem;
+}

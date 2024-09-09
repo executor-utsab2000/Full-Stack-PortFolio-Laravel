@@ -31,7 +31,11 @@
     resize: none;
 }
 
-textarea{
+.coolinput .input::-webkit-scrollbar {
+    display: none !important;
+}
+
+textarea {
     font-weight: 600;
     font-size: 0.6rem;
 }
@@ -54,7 +58,7 @@ textarea{
     background-color: #06d6a0 !important;
 }
 
-.errorMsg{
+.errorMsg {
     padding-left: 1rem;
     font-weight: 700;
     font-size: 0.7rem;

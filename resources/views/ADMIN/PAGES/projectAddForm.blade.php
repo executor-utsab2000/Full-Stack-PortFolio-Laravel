@@ -146,7 +146,7 @@
             <div class="col-12 px-2 my-2">
                 <div class="inputContainers">
                     <div class="coolinput">
-                        <label for="input" class="text">Live Preview Link :</label>
+                        <label for="input" class="text">Languages Used :</label>
                         <div class="languagesContainers d-flex justify-content-around flex-wrap">
                             {{-- loop of lnguages --}}
                             @foreach ($languageData as $item)
@@ -175,4 +175,15 @@
         </div>
     </form>
 
+
+    <script>
+        Swal.fire({
+            title: "<strong>Keep in Mind</strong>",
+            icon: "info",
+            html: `
+                    The fields 
+                    <b><span class="text-danger">Project Name , Project Category , Github Link , Live Preview Link</span></b> are not editable
+                `
+        });
+    </script>
 @endsection

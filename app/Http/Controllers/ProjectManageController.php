@@ -99,7 +99,10 @@ class ProjectManageController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $projectData = DB::table('projects')->where('project_id', $id)->first();
+        $categoryData = $categoryData = DB::table('categories')->get();
+        $languageData = $categoryData = DB::table('languages')->get();
+        return view('ADMIN.PAGES.projectUpdateForm', compact('projectData', 'categoryData' , 'languageData'));
     }
 
     /**

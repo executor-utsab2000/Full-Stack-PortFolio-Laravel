@@ -1,0 +1,28 @@
+.mainDiv {
+    height: auto;
+    padding: 0.5rem
+}
+
+@media (min-width: 991.5px) {
+    .mainDiv {
+        height: 100vh;
+    }
+}
+
+.projectUpdateImageContainer img:first-child {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.projectUpdateImageContainer img:last-child {
+    filter: drop-shadow(5px 5px 8px #000000);
+    margin-bottom: 2rem;
+}
+
+.updateProject .header{
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: red;
+}

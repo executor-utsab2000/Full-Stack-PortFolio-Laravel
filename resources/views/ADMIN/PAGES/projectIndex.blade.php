@@ -47,7 +47,7 @@
                             <button class="btn"><i class="fa-solid fa-pen-to-square"></i></button>
                         </a>
 
-                        <form action="{{ route('project.destroy', $item->project_id) }}">
+                        <form action="{{ route('project.destroy', $item->project_id) }}" method="post">
                             @csrf
                             @method('delete')
                             <button class="btn" type="submit"><i class="fa-solid fa-trash-can"></i></i></button>

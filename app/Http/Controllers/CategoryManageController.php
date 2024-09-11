@@ -21,7 +21,7 @@ class CategoryManageController extends Controller
      */
     public function create()
     {
-        //
+        return view('ADMIN.PAGES.Add Form.categoryAdd');
     }
 
     /**
@@ -29,7 +29,17 @@ class CategoryManageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['categoryName' => 'required'], ['categoryName.required' => 'Enter Category Name']);
+
+        $categoryId = uniqid('category-');
+        $insertData = DB::table('categories')->insert([
+            'categories_id' => $categoryId,
+            'categories_name' => $request->categoryName
+        ]);
+
+        if ($insertData) {
+            return redirect()->route('category.index')->with('message', 'Category Added Successfully');
+        }
     }
 
     /**
@@ -45,7 +55,8 @@ class CategoryManageController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $categoryData = DB::table('categories')->where('categories_id' , $id)->first();
+        return view('ADMIN.PAGES.Update Form.categoryUpdateForm' , compact('categoryData')) ;
     }
 
     /**
@@ -53,7 +64,17 @@ class CategoryManageController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        $request->validate(['categoryName' => 'required'], ['categoryName.required' => 'Enter Category Name']);
+
+        $categoryId = uniqid('category-');
+        $insertData = DB::table('categories')->where('categories_id' , $id)->update([
+            'categories_name' => $request->categoryName
+        ]);
+
+        if ($insertData) {
+            return redirect()->route('category.index')->with('message', 'Category Updated Successfully');
+        }
     }
 
     /**
@@ -61,6 +82,11 @@ class CategoryManageController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $deleteData = DB::table('categories')->where('categories_id', $id)->delete();
+
+        if ($deleteData) {
+            return redirect()->route('category.index')->with('message', 'Category deleted Successfully');
+
+        }
     }
 }

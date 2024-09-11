@@ -8,7 +8,7 @@
     <title>Admin || @yield('pageName')</title>
     <link rel="stylesheet" href="{{ asset('CSS/ADMIN/adminPagesGeneral.css') }}">
     @yield('css_js')
-    @include('Components.Fixed.CDN')
+    @include('CDN')
 </head>
 
 <body>
@@ -55,7 +55,7 @@
         {{-- ----------------------------------------------------- --}}
 
         <div class="row mt-5">
-            @include('Components.Fixed.footer')
+            @include('User.Components.Fixed.footer')
         </div>
     </div>
 

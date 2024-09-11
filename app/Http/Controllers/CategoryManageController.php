@@ -13,7 +13,7 @@ class CategoryManageController extends Controller
     public function index()
     {
         $categoryData = DB::table('categories')->get();
-        return view('ADMIN.PAGES.categoryIndex', compact('categoryData'));
+        return view('ADMIN.PAGES.Index Page.categoryIndex', compact('categoryData'));
     }
 
     /**

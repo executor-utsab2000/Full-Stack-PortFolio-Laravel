@@ -17,7 +17,7 @@
         }
     </style>
 
-    @include('Components.Fixed.CDN')
+    @include('CDN')
     <link rel="shortcut icon"
         href="https://cdni.iconscout.com/illustration/premium/thumb/coder-illustration-download-in-svg-png-gif-file-formats--programmer-developer-developing-programming-businex-colorful-pack-business-illustrations-2895977.png?f=webp"
         type="image/x-icon">
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    @include('Components.Fixed.navbar', ['navBarData' => $navBarData])
+    @include('User.Components.Fixed.navbar', ['navBarData' => $navBarData])
 
     <div class="container-fluid px-0">
 
@@ -33,7 +33,7 @@
 
     </div>
 
-    @include('Components.Fixed.footer')
+    @include('User.Components.Fixed.footer')
 
 </body>
 <script>

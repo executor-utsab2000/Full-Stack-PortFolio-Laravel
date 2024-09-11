@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('CSS/ADMIN/adminAddUpdateForm.css') }}">
     <link rel="stylesheet" href="{{ asset('CSS/inputField.css') }}">
     @yield('css_js')
-    @include('Components.Fixed.CDN')
+    @include('CDN')
 </head>
 
 <body>

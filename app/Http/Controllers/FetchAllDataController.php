@@ -78,7 +78,7 @@ class FetchAllDataController extends Controller
 
     public function index()
     {
-        return view('home', [
+        return view('User.home', [
             'educationData' => $this->getEducation(),
             'hobbyData' => $this->getHobby(),
             'socialData' => $this->getSocial(),
@@ -91,7 +91,7 @@ class FetchAllDataController extends Controller
 
     public function ContactForm()
     {
-        return view('contactForm');
+        return view('User.contactForm');
     }
 
 
@@ -107,7 +107,7 @@ class FetchAllDataController extends Controller
         $projectDetails->project_languages = $languageGet;
 
 
-        return view('projectDetailsPage', [
+        return view('User.projectDetailsPage', [
             'navBarData' => $this->getCategories_Project(),
             'projectData' => $projectDetails
         ]);
@@ -116,62 +116,7 @@ class FetchAllDataController extends Controller
     }
 
 
-    // ------------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------------------------------
 
-
-
-
-    public function formData()
-    {
-        return view('formTry', ['languages' => $this->getLanguages()]);
-    }
-
-
-
-    // public function langAdd()
-    public function langAdd(Request $request)
-    {
-        // return $this->getProjectSectionData();
-        // return $request;
-
-        $newArray = [];
-        $languageId = $request->languages;
-
-        foreach ($languageId as $language) {
-
-            $languageDetails = DB::table('languages')->where('language_id', $language)->first();
-            array_push($newArray, [
-                'languageId' => $language,
-                'languageName' => $languageDetails->language_name,
-                'languageImage' => $languageDetails->language_image,
-            ]);
-        }
-
-        return json_encode($newArray);
-        //     // return $languageKnown ;
-
-
-        //     // to get data
-        //     // $projData = DB::table('projects')->get();
-
-        //     // $newArray = [];
-
-        //     // foreach ($projData as $value) {
-        //     //     $imgName = DB::table('languages')->get();
-        //     //     $languageArray = json_decode($value->project_languages);
-
-        //     //     $newArray = [];
-        //     //     foreach ($languageArray as $value) {
-        //     //         $data = DB::table('languages')->where('language_id', $value->languageId)->get();
-        //     //         // return $data;
-
-        //     //     }
-        //     // }
-
-        // return $this->getProjectSectionData();
-    }
 
 
 

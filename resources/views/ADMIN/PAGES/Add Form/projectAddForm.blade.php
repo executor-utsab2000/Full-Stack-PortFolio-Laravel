@@ -22,6 +22,7 @@
     </style>
 @endsection
 
+{{-- {{ $errors }} --}}
 
 @section('formInputs')
 
@@ -153,13 +154,13 @@
                                 <div class="m-2">
                                     <label for="{{ $item->language_name }}"
                                         class="languageCheckBoxLabel me-1">{{ $item->language_name }}</label>
-                                    <input type="checkbox" name="languages[]" class="language"
+                                    <input type="checkbox" name="language[]" class="language"
                                         id="{{ $item->language_name }}" value="{{ $item->language_id }}">
                                 </div>
                             @endforeach
                             {{-- loop of lnguages --}}
                         </div>
-                        @error('languages')
+                        @error('language')
                             <span class="errorMsg text-danger">{{ $message }}</span>
                         @enderror
                     </div>

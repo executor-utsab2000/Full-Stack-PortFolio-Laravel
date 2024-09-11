@@ -13,7 +13,7 @@ class LanguageManageController extends Controller
     public function index()
     {
         $languageData = DB::table('languages')->get();
-        return view('ADMIN.PAGES.languageIndex', compact('languageData'));
+        return view('ADMIN.PAGES.Index Page.languageIndex', compact('languageData'));
     }
 
     /**
@@ -21,7 +21,7 @@ class LanguageManageController extends Controller
      */
     public function create()
     {
-        return view('ADMIN.PAGES.languageAddForm');
+        return view('ADMIN.PAGES.Add Form.languageAddForm');
     }
 
     /**
@@ -88,7 +88,7 @@ class LanguageManageController extends Controller
             ->where('language_id', $id)
             ->first();
 
-        return view('ADMIN.PAGES.languageUpdateForm', compact('userGet'));
+        return view('ADMIN.PAGES.Update Form.languageUpdateForm', compact('userGet'));
     }
 
     /**

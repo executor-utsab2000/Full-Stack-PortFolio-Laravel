@@ -26,7 +26,7 @@ class UpdateProjectRequest extends FormRequest
             'projectMoto' => 'required',
             'monthsUsed' => 'required | numeric | between:0,12',
             'daysUsed' => 'required | numeric',
-            'languages' => 'required',
+            'language' => 'required',
         ];
     }
 

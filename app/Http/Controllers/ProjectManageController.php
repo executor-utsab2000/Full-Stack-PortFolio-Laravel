@@ -15,7 +15,7 @@ class ProjectManageController extends Controller
     public function index()
     {
         $projectData = DB::table('projects')->get();
-        return view('ADMIN/PAGES/projectIndex', compact('projectData'));
+        return view('ADMIN.PAGES.Index Page.projectIndex', compact('projectData'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ProjectManageController extends Controller
     {
         $languageData = DB::table('languages')->get();
         $categoryData = DB::table('categories')->get();
-        return view('ADMIN.PAGES.projectAddForm', compact('languageData', 'categoryData'));
+        return view('ADMIN.PAGES.Add Form.projectAddForm', compact('languageData', 'categoryData'));
     }
 
     /**
@@ -51,8 +51,8 @@ class ProjectManageController extends Controller
         ];
 
         $newArray = [];
-        $languageId = $request->languages;
-
+        $languageId = $request->language;
+        // return $languageId;
         foreach ($languageId as $language) {
 
             $languageDetails = DB::table('languages')->where('language_id', $language)->first();
@@ -92,7 +92,7 @@ class ProjectManageController extends Controller
     public function show(string $id)
     {
         $projectData = DB::table('projects')->where('project_id', $id)->first();
-        return view('ADMIN.PAGES.projectDetailsAdmin', compact('projectData'));
+        return view('ADMIN.PAGES.Show Details.projectDetailsAdmin', compact('projectData'));
     }
 
     /**
@@ -103,7 +103,7 @@ class ProjectManageController extends Controller
         $projectData = DB::table('projects')->where('project_id', $id)->first();
         $categoryData = $categoryData = DB::table('categories')->get();
         $languageData = $categoryData = DB::table('languages')->get();
-        return view('ADMIN.PAGES.projectUpdateForm', compact('projectData', 'categoryData', 'languageData'));
+        return view('ADMIN.PAGES.Update Form.projectUpdateForm', compact('projectData', 'categoryData', 'languageData'));
     }
 
     /**
@@ -151,7 +151,7 @@ class ProjectManageController extends Controller
             ];
 
             $newArray = [];
-            $languageId = $request->languages;
+            $languageId = $request->language;
 
             foreach ($languageId as $language) {
 

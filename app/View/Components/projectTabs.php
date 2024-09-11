@@ -23,6 +23,6 @@ class projectTabs extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.project-tabs');
+        return view('User.components.project-tabs');
     }
 }

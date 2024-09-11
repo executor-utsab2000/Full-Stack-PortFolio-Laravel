@@ -13,7 +13,7 @@ class SocialManageController extends Controller
     public function index()
     {
         $socialData = DB::table('socials')->get();
-        return view('ADMIN.PAGES.socialIndex', compact('socialData'));
+        return view('ADMIN.PAGES.Index Page.socialIndex', compact('socialData'));
     }
 
     /**

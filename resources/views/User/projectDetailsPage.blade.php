@@ -1,4 +1,4 @@
-@extends('Master_Layout.masterLayout')
+@extends('User.Master_Layout.masterLayout')
 
 @section('subTitle')
     {{ $projectData->project_name }}

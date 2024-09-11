@@ -13,7 +13,7 @@ class ContactFormManageController extends Controller
     public function index()
     {
         $contactData = DB::table('contact_form')->get();
-        return view('ADMIN/PAGES/contactFormIndex', compact('contactData'));
+        return view('ADMIN.PAGES.Index Page.contactFormIndex', compact('contactData'));
     }
 
     /**

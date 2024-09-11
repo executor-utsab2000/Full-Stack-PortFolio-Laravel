@@ -32,7 +32,7 @@ class InsertDataValidatonRequest extends FormRequest
             'projectImage' => 'required | mimes:png,jpg,jpeg|max:5120',
             'githubLink' => 'nullable|url',
             'liveLink' => 'nullable|url',
-            'languages' => 'required'
+            'language' => 'required'
         ];
     }
 

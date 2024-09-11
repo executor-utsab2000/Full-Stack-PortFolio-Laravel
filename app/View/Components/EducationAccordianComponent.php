@@ -37,6 +37,6 @@ class EducationAccordianComponent extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.education-accordian-component');
+        return view('User.components.education-accordian-component');
     }
 }

@@ -24,6 +24,6 @@ class sectionHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.section-header');
+        return view('User.components.section-header');
     }
 }

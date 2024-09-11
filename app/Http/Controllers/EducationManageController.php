@@ -13,7 +13,7 @@ class EducationManageController extends Controller
     public function index()
     {
         $educationData = DB::table('education')->get();
-        return view('ADMIN.PAGES.educationIndex', compact('educationData'));
+        return view('ADMIN.PAGES.Index Page.educationIndex', compact('educationData'));
     }
 
     /**

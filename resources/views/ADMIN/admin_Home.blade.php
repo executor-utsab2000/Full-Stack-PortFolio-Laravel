@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin</title>
     <link rel="stylesheet" href="{{ asset('CSS/ADMIN/adminStyle.css') }}">
-    @include('Components.Fixed.CDN')
+    @include('CDN')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -194,7 +194,7 @@
         </div>
 
         <div class="row">
-            @include('Components.Fixed.footer')
+            @include('User.Components.Fixed.footer')
         </div>
     </div>
 </body>

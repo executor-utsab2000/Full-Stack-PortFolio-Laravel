@@ -22,6 +22,6 @@ class HobbyCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.hobby-card');
+        return view('User.components.hobby-card');
     }
 }

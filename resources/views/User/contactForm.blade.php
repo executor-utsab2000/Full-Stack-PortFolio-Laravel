@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="CSS/ContactForm.css">
     <link rel="stylesheet" href="CSS/inputField.css">
 
-    @include('Components.Fixed.CDN')
+    @include('CDN')
     <link rel="shortcut icon"
         href="https://cdni.iconscout.com/illustration/premium/thumb/coder-illustration-download-in-svg-png-gif-file-formats--programmer-developer-developing-programming-businex-colorful-pack-business-illustrations-2895977.png?f=webp"
         type="image/x-icon">

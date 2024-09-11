@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin || {{ $projectData->project_name }}</title>
     <link rel="stylesheet" href="{{ asset('CSS/ADMIN/projectDetailsAdmin.blade.css') }}">
-    @include('Components.Fixed.CDN')
+    @include('CDN')
 </head>
 
 <body>

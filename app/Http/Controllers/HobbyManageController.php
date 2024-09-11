@@ -13,7 +13,7 @@ class HobbyManageController extends Controller
     public function index()
     {
         $hobbyData = DB::table('hobbies')->get();
-        return view('ADMIN/PAGES/hobbyIndex' , compact('hobbyData'));
+        return view('ADMIN.PAGES.Index Page.hobbyIndex' , compact('hobbyData'));
     }
 
     /**

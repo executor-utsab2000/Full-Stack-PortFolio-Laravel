@@ -34,12 +34,14 @@ Route::post('/formSubmitUser', UserDataInsertController::class)->name('userFormS
 
 Route::get('/admin', [AdminHomeDasBoardController::class, 'adminDashBoardData'])->name('admin');
 
+Route::resource('project', ProjectManageController::class);
 
 Route::resource('language', LanguageManageController::class)->except('show');
-Route::resource('education', EducationManageController::class)->except('show');
 Route::resource('category', CategoryManageController::class)->except('show');
-Route::resource('social', SocialManageController::class)->except('show');
-Route::resource('hobby', HobbyManageController::class)->except('show');
+
+Route::resource('education', EducationManageController::class)->only('index');
+Route::resource('social', SocialManageController::class)->except('show')->only('index');
+Route::resource('hobby', HobbyManageController::class)->except('show')->only('index');
 
 Route::resource('contact_form', ContactFormManageController::class)->only([
     'index',
@@ -47,7 +49,6 @@ Route::resource('contact_form', ContactFormManageController::class)->only([
     'destroy'
 ]);
 
-Route::resource('project', ProjectManageController::class);
 
 
 
